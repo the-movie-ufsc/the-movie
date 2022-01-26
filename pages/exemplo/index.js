@@ -1,9 +1,10 @@
+import Footer from "../../components/Shared/Footer"
+
 export default function Home() {
   return (
-    <div>
-      <main className='flex flex-1 w-full h-screen items-center justify-center'>
-        <h1 className='text-5xl text-red-400 text-center font-extrabold'>Demon Slayer</h1>
-      </main>
+    <div className="bg-primeira">
+      <h1 className='text-5xl text-center font-extrabold text-white'>Demon Slayer</h1>
+      <Footer/>
     </div>
   )
 }
