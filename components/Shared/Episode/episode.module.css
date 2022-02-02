@@ -1,0 +1,35 @@
+.ep {
+  color: var(--color-white);
+  font-size: 14px;
+  background-color: var(--color-dark-gray);
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 10px;
+}
+
+.ep:first-child {
+  margin: 0;
+}
+
+.info {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 15% 70% 15%;
+}
+
+.info strong {
+  font-weight: 800;
+  font-size: 24px;
+  text-align: center;
+}
+
+.info p {
+  font-size: 14px;
+}
+
+.info .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,4 +1,6 @@
 import styles from "./about.module.css";
+import Episode from "../../components/Shared/Episode";
+import Menu from "../../components/Shared/Menu";
 
 export default function About() {
   return (
@@ -10,9 +12,7 @@ export default function About() {
           className={styles.image}
         />
 
-        <div className={styles.menu}>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
+        <Menu />
 
         <div className={styles.info}>
           <div className={styles.about}>
@@ -38,18 +38,10 @@ export default function About() {
       </div>
 
       <div className={styles.eps}>
-        <div className={styles.ep}>
-          <p>Lorem ipsum dolor sit amet</p>
-        </div>
-        <div className={styles.ep}>
-          <p>Lorem ipsum dolor sit amet</p>
-        </div>
-        <div className={styles.ep}>
-          <p>Lorem ipsum dolor sit amet</p>
-        </div>
-        <div className={styles.ep}>
-          <p>Lorem ipsum dolor sit amet</p>
-        </div>
+        <Episode />
+        <Episode />
+        <Episode />
+        <Episode />
       </div>
     </div>
   );
