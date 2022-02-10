@@ -7,15 +7,7 @@
 }
 
 .effect {
-  background: linear-gradient(
-    90.08deg,
-    #171717 6.47%,
-    rgba(23, 23, 23, 0.95) 22.66%,
-    rgba(128, 88, 88, 0.8) 34.14%,
-    rgba(23, 23, 23, 0.5) 45.63%,
-    rgba(23, 23, 23, 0.378261) 60.77%,
-    rgba(23, 23, 23, 0) 100.45%
-  );
+  background: linear-gradient(90deg, #171717 10%, transparent);
   position: absolute;
   width: 100%;
   height: 100%;
