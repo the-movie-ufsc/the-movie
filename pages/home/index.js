@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./home.module.css";
 import TMDB from "../TMDB"
 import MoovieRow from "../../components/Shared/MoovieRow";
+import Menu from "../../components/Shared/Menu";
 
 export default function Home() {
   const [movieList, setMovieList] = useState([]);
@@ -18,7 +19,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       {/* Menu */}
-
+      <Menu />
       {/* Destaque */}
 
       {/* Listas */}
