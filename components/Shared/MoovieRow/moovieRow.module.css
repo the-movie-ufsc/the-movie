@@ -5,6 +5,7 @@
 }
 
 .movie_row > h2 {
+    font-size: 24px;
     margin: 0px 0px 0px 30px;
 }
 
@@ -20,9 +21,16 @@
 .moovie_row_item {
     display: inline-block;
     width: 150px;
+    cursor:pointer
 }
 
 .img {
+    border-radius: 10px;
     width: 100%;
     transform: scale(0.9);
+    transition: all ease 0.2s;
+}
+
+.img:hover{
+    transform: scale(1);
 }
