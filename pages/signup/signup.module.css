@@ -5,7 +5,7 @@
   height: 100vh;
 }
 
-.login {
+.signup {
   display: flex;
   z-index: 10;
   flex-direction: column;
@@ -19,10 +19,25 @@
   color: #ffc700;
   font-size: 48px;
   font-weight: 800;
+  margin-bottom: 50px;
 }
 
-.logo {
-  width: 300px;
+.inputIcon {
+  display: flex;
+  width: 100%;
+}
+
+.inputIcon input {
+  width: 100%;
+}
+
+.icon {
+  position: absolute;
+  margin-top: 15px;
+  margin-right: 50px;
+  z-index: 50;
+  font-size: 25px;
+  color: black;
 }
 
 .entrada {
