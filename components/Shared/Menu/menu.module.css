@@ -11,20 +11,32 @@
 }
 
 .menu .logo {
-  background-color: tomato;
+  display: flex;
+  align-items: center;
 }
 
 .menu .navigation {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: thistle;
+}
+
+.menu .navigation .link {
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--color-white);
 }
 
 .menu .search {
   background-color: yellowgreen;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .menu .avatar {
   background-color: yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -40,8 +40,6 @@ export default function About() {
       <div className={styles.eps}>
         <Episode />
         <Episode />
-        <Episode />
-        <Episode />
       </div>
     </div>
   );
