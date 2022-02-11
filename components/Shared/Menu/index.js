@@ -6,7 +6,7 @@ export default function Menu() {
     <div className={styles.container}>
       <div className={styles.menu}>
         <div className={styles.logo}>
-          {/* <img src="/logo_menu.svg" alt="The Movie" /> */}
+          <img src="/logo_menu.svg" alt="The Movie" />
         </div>
         <div className={styles.navigation}>
           <Link href="/home">
