@@ -22,8 +22,19 @@ export default function Menu() {
             <a className={styles.link}>Minha lista</a>
           </Link>
         </div>
-        <div className={styles.search}>The Movie</div>
-        <div className={styles.avatar}>The Movie</div>
+
+        <div className={styles.search}>
+          <input
+            type="text"
+            placeholder="Pesquise por filme, série, gênero..."
+          />
+        </div>
+        <div className={styles.avatar}>
+          <img
+            src="https://pbs.twimg.com/media/FFz6f9UVcAQyLhb.jpg"
+            alt="Avatar"
+          />
+        </div>
       </div>
     </div>
   );

@@ -7,7 +7,7 @@
 .menu {
   width: 80%;
   display: grid;
-  grid-template-columns: 20% 40% 30% 10%;
+  grid-template-columns: 15% 45% 35% 5%;
 }
 
 .menu .logo {
@@ -29,19 +29,37 @@
 }
 
 .menu .navigation .link:hover {
-  color: #FFC700;
+  color: var(--color-yellow);
 }
 
 .menu .search {
-  background-color: yellowgreen;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.menu .search input {
+  background: rgba(54, 54, 54, 0.6);
+  border-style: none;
+  border-radius: 50px;
+  padding: 10px;
+  width: 80%;
+}
+
+.menu .search input:focus {
+  border-color: rgba(229, 103, 23, 0.8);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  outline: 0 none;
+}
+
+.menu .avatar {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.menu .avatar {
-  background-color: yellow;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.menu .avatar img {
+  border-radius: 50%;
+  max-height: 50px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
