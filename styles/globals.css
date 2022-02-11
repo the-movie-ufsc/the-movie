@@ -18,13 +18,25 @@
   box-sizing: border-box;
 }
 
-html {
-  height: 100vh;
+html,
+body,
+#root {
+  min-height: 100vh;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
   background-color: var(--color-black);
+}
+
+body,
+input,
+button,
+textarea {
+  font-family: "Poppins", sans-serif;
+  color: var(--color-white);
+}
+
+#root {
   display: flex;
   align-items: center;
   justify-content: center;
