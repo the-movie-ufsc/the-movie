@@ -18,8 +18,7 @@
   box-sizing: border-box;
 }
 
-html,
-body {
+html {
   height: 100vh;
 }
 
