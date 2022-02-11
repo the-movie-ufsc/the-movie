@@ -25,6 +25,11 @@
   font-size: 14px;
   text-decoration: none;
   color: var(--color-white);
+  transition: all ease 0.2s;
+}
+
+.menu .navigation .link:hover {
+  color: #FFC700;
 }
 
 .menu .search {
