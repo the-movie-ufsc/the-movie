@@ -6,12 +6,13 @@
 
 .movie_row > h2 {
   font-size: 24px;
-  margin: 0px 0px 0px 30px;
+  padding-left: 10px;
+  margin: 0px 0px 0px 7.5%;
 }
 
 .list_area {
   overflow-x: hidden;
-  padding-left: 30px;
+  padding-left: 7.5%;
 }
 
 .movie_row_list {
@@ -20,7 +21,7 @@
 
 .moovie_row_item {
   display: inline-block;
-  width: 150px;
+  width: 193px;
   cursor: pointer;
 }
 
