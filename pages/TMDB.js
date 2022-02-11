@@ -18,17 +18,12 @@ export default {
             {
                 slug: 'toprated',
                 title: 'Em alta',
-                items: await basicFetch(`/movie/toprated?language=pt-BR&api_key=${API_KEY}`)
+                items: await basicFetch(`/movie/top_rated?language=pt-BR&api_key=${API_KEY}`)
             },
             {
                 slug: 'action',
                 title: 'Ação',
                 items: await basicFetch(`/discover/movie?with_genres=28&language=pt-BR&api_key=${API_KEY}`)
-            },
-            {
-                slug: 'thriller',
-                title: 'Suspense',
-                items: await basicFetch(`/discover/movie?with_genres=4&language=pt-BR&api_key=${API_KEY}`)
             },
             {
                 slug: 'comedy',
