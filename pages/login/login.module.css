@@ -1,8 +1,18 @@
 .container {
-  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100vh;
+}
+
+.login {
+  display: flex;
+  z-index: 10;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10%;
+  height: 100vh;
 }
 
 .title {
@@ -86,17 +96,16 @@
 }
 
 .footer {
-  margin-top: 200px;
-  width: 100%;
-  height: 70vh;
-  height: 100px;
-}
-
-.cover {
-  overflow: hidden;
   position: absolute;
+  display: flex;
   width: 100%;
   height: 100%;
-  background: url("/login/efeito.svg") no-repeat;
-  background-size: 100% 70vh;
+  justify-content: end;
+  inset-inline-start: end;
+}
+
+.image {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
 }
