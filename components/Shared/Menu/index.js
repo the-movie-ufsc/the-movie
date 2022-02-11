@@ -19,8 +19,8 @@ export default function Menu() {
             <a href="#about">Minha lista</a>
           </li>
         </ul>
-        <div className={styles.search}>The Movie</div>
-        <div className={styles.avatar}>The Movie</div>
+        <div className={styles.search}>Search</div>
+        <div className={styles.avatar}>Avatar</div>
       </div>
     </div>
   );
