@@ -1,0 +1,116 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding-top: 100px;
+}
+
+.list {
+  display: flex;
+  z-index: 10;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10%;
+  height: 100vh;
+  width: 100%;
+  padding: 100px;
+}
+
+.title {
+  color: #ffc700;
+  font-size: 30px;
+  font-weight: 800;
+  align-self: flex-start;
+}
+
+.logo {
+  width: 300px;
+}
+
+.entrada {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  gap: 10px;
+  width: 320px;
+}
+
+.entrada .input {
+  padding: 15px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #363636;
+  outline-color: #ffc700;
+}
+
+.entrada .input:hover {
+  border-color: #ffc700;
+}
+
+.entrada div {
+  display: flex;
+  justify-content: center;
+}
+
+.entrada p {
+  display: flex;
+  color: white;
+  cursor: pointer;
+}
+
+.entrada p:hover {
+  color: #ffc700;
+}
+
+.entrada ::placeholder {
+  opacity: 0.4;
+}
+
+.button {
+  margin-top: 50px;
+  width: 320px;
+  background-color: #ffc700;
+  border-radius: 20px;
+  padding: 15px 0px;
+  cursor: pointer;
+}
+
+.button div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.register {
+  display: flex;
+  margin-top: 50px;
+  gap: 5px;
+  color: white;
+}
+
+.register a {
+  color: #ffc700;
+  cursor: pointer;
+}
+
+.footer {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: end;
+  inset-inline-start: end;
+}
+
+.image {
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  width: 100vw;
+  object-fit: cover;
+}
