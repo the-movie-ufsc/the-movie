@@ -7,10 +7,10 @@ export default function About() {
     <div className={styles.container}>
       <div className={styles.cover}>
         <div className={styles.effect}></div>
-        <img
-          src="https://wallpaperaccess.com/full/6760532.jpg"
-          className={styles.image}
-        />
+          <img
+            src="https://wallpaperaccess.com/full/6760532.jpg"
+            className={styles.image}
+          />
 
         <Menu />
 
