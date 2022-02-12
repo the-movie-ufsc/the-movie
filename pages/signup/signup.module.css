@@ -31,11 +31,16 @@
   width: 100%;
 }
 
+.boxIcon {
+  position: relative;
+  background-color: #ffc700;
+}
+
 .icon {
+  width: 30px;
   position: absolute;
   margin-top: 15px;
   margin-right: 50px;
-  font-size: 25px;
   color: black;
   cursor: pointer;
 }
