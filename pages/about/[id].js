@@ -1,8 +1,12 @@
+import { useRouter } from "next/router";
 import styles from "./about.module.css";
 import Episode from "../../components/Shared/Episode";
 import Menu from "../../components/Shared/Menu";
 
-export default function About() {
+export default () => {
+  const router = useRouter();
+  const { id } = router.query;
+
   return (
     <div className={styles.container}>
       <div className={styles.cover}>
@@ -47,4 +51,4 @@ export default function About() {
       </div>
     </div>
   );
-}
+};
