@@ -1,30 +1,43 @@
-// import "./footer.css"
+import styles from "./footer.module.css";
 
 export default function Footer() {
-  // javascript
   return (
-    <section>
-      <div className="mt-96 bg-primeira">
-        <div className="grid grid-cols-4 ">
-          <div></div>
-          <div>
-            <div className="text-terceira font-bold text-2xl">The Movie</div>
-            <p className="mt-2 text-white max-w-xs">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s,
-            </p>
+    <div className={styles.container}>
+      <div className={styles.gridContainer}>
+        <div className={styles.grid}>
+          <div className={styles.gridBox}>
+            <div>
+              <h3>The Movie</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dictum id nulla sit amet
+                pulvinar. Cras vitae fringilla justo, viverra consequat magna
+              </p>
+            </div>
           </div>
-          <div className="mt-7">
-            <p className="mt-2 text-white max-w-xs">aaaa</p>
-            <p className="mt-2 text-white max-w-xs">aaaa</p>
-            <p className="mt-2 text-white max-w-xs">aaaa</p>
-            <p className="mt-2 text-white max-w-xs">aaaa</p>
+
+          <div className={styles.gridBox}>
+            <div className={styles.links}>
+              <a>Política de Privacidade</a>
+              <a>Central de ajuda</a>
+              <a>Contato</a>
+              <a>Termos de uso</a>
+            </div>
           </div>
-          <div>C</div>
+
+          <div className={styles.gridBox}>
+            <div>
+              <img src="/footer/instagram.svg" alt="instaIcon" className={styles.socialIncon} />
+              <img src="/footer/facebook.svg" alt="faceIcon" className={styles.socialIncon} />
+              <img src="/footer/twitter.svg" alt="twitterIcon" className={styles.socialIncon} />
+            </div>
+          </div>
         </div>
-        <img src="/detalhe.svg" alt="detalhe" className="w-full bg-primeira" />
       </div>
-    </section>
+
+      <div className={styles.bottom}>
+        <img className={styles.image} src="/footer/onda.svg" />
+        <h4 className={styles.mark}>© 2021-2022 TheMovie</h4>
+      </div>
+    </div>
   );
 }

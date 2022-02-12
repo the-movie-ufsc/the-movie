@@ -19,11 +19,7 @@ export default function Login() {
 
           <form onSubmit={() => submit()}>
             <div className={styles.entrada}>
-              <input
-                type="email"
-                className={styles.input}
-                placeholder="Email"
-              />
+              <input type="email" className={styles.input} placeholder="Email" />
               <input className={styles.input} placeholder="Senha" />
               <div>
                 <p>Esqueceu a sua senha?</p>
