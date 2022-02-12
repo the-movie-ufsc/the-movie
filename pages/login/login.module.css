@@ -38,10 +38,12 @@
   border-radius: 20px;
   font-size: 14px;
   color: #363636;
-  outline-color: #ffc700;
+  border: transparent;
+  outline: none;
 }
 
 .entrada .input:hover {
+  border: 2px;
   border-color: #ffc700;
 }
 

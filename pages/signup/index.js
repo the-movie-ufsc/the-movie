@@ -1,27 +1,24 @@
 import styles from "./signup.module.css";
 import Head from "next/head";
-import { MdVisibility } from "react-icons/md";
 
-export default function Home() {
+export default function Signup() {
+  const eyeView = "/login/icons/view.svg";
+  const eyeHidden = "/login/icons/hidden.svg";
+
   function submit() {
     console.log("data");
   }
 
-  function changeViewPassword() {
-    var x = document.getElementById("password");
-    if (x.type === "password") {
-      x.type = "text";
-    } else {
-      x.type = "password";
-    }
-  }
+  function changeViewPassword(element) {
+    let t = document.getElementById(element);
+    let image = document.getElementById("view-" + element);
 
-  function changeViewConfirmPassword() {
-    var x = document.getElementById("confirmPassword");
-    if (x.type === "password") {
-      x.type = "text";
+    if (t.type === "password") {
+      t.type = "text";
+      image.src = eyeHidden;
     } else {
-      x.type = "password";
+      t.type = "password";
+      image.src = eyeView;
     }
   }
 
@@ -51,10 +48,16 @@ export default function Home() {
                   className={styles.input}
                   placeholder="Senha"
                 />
-                <div>
-                  <div className={styles.icon}>
-                    <MdVisibility onClick={changeViewPassword} />
-                  </div>
+                <div
+                  onClick={() => changeViewPassword("password")}
+                  className={styles.boxIcon}
+                >
+                  <img
+                    id="view-password"
+                    src={eyeView}
+                    className={styles.icon}
+                    alt="viewOption"
+                  />
                 </div>
               </div>
               <div className={styles.inputIcon}>
@@ -64,10 +67,16 @@ export default function Home() {
                   className={styles.input}
                   placeholder="Confirmar Senha"
                 />
-                <div>
-                  <div className={styles.icon}>
-                    <MdVisibility onClick={changeViewConfirmPassword} />
-                  </div>
+                <div
+                  onClick={() => changeViewPassword("confirmPassword")}
+                  className={styles.boxIcon}
+                >
+                  <img
+                    id="view-confirmPassword"
+                    src={eyeView}
+                    className={styles.icon}
+                    alt="viewOption"
+                  />
                 </div>
               </div>
             </div>

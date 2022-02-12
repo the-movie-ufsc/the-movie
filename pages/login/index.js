@@ -1,7 +1,7 @@
 import styles from "./login.module.css";
 import Head from "next/head";
 
-export default function Home() {
+export default function Login() {
   function submit() {
     console.log("data");
   }
