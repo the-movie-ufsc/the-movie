@@ -8,10 +8,8 @@
   width: 90%;
   display: grid;
   grid-template-columns: 20% 40% 35% 5%;
-  top: 0;
-  position: fixed;
-  padding-top: 20px;
-  
+  position: absolute;
+  top: 20px;
 }
 
 .menu .logo {
