@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import styles from "./home.module.css";
-import TMDB from "../TMDB";
 import MovieRow from "../../components/Shared/MovieRow";
 import Menu from "../../components/Shared/Menu";
 import FeaturedMovie from "../../components/Shared/FeaturedMovie/index";
+import TMDB from "../../components/TMDB";
 
 export default function Home() {
   const [movieList, setMovieList] = useState([]);
@@ -17,9 +17,7 @@ export default function Home() {
 
       //pegando destaque (featured)
       let originals = list.filter((i) => i.slug === "originals");
-      let random = Math.floor(
-        Math.random() * (originals[0].items.results.length - 1)
-      );
+      let random = Math.floor(Math.random() * (originals[0].items.results.length - 1));
       let chosen = originals[0].items.results[random];
       let chosenInfo = await TMDB.getMovieInfo(chosen.id, "tv");
       setFeaturedData(chosenInfo);
@@ -33,9 +31,7 @@ export default function Home() {
       <Menu className={styles.menu} />
 
       {/* Destaque */}
-      {featuredData && (
-        <FeaturedMovie className={styles.featured_movie} item={featuredData} />
-      )}
+      {featuredData && <FeaturedMovie className={styles.featured_movie} item={featuredData} />}
 
       {/* Listas */}
       <section className={styles.list}>

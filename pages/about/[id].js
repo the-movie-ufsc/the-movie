@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import styles from "./about.module.css";
 import Episode from "../../components/Shared/Episode";
 import Menu from "../../components/Shared/Menu";
-import TMDB from "../TMDB";
+import TMDB from "../../components/TMDB";
 
 export default function About() {
   const router = useRouter();
