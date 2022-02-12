@@ -1,0 +1,37 @@
+.movie_row {
+  color: #ffc700;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.movie_row > h2 {
+  font-size: 24px;
+  padding-left: 10px;
+  margin: 0px 0px 0px 5%;
+}
+
+.list_area {
+  overflow-x: hidden;
+  padding-left: 5%;
+}
+
+.movie_row_list {
+  width: 999999999999px;
+}
+
+.moovie_row_item {
+  display: inline-block;
+  width: 193px;
+  cursor: pointer;
+}
+
+.img {
+  border-radius: 10px;
+  width: 100%;
+  transform: scale(0.9);
+  transition: all ease 0.2s;
+}
+
+.img:hover {
+  transform: scale(1);
+}

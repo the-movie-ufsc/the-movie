@@ -1,16 +1,20 @@
+import { useRouter } from "next/router";
 import styles from "./about.module.css";
 import Episode from "../../components/Shared/Episode";
 import Menu from "../../components/Shared/Menu";
 
-export default function About() {
+export default () => {
+  const router = useRouter();
+  const { id } = router.query;
+
   return (
     <div className={styles.container}>
       <div className={styles.cover}>
         <div className={styles.effect}></div>
-        <img
-          src="https://wallpaperaccess.com/full/6760532.jpg"
-          className={styles.image}
-        />
+          <img
+            src="https://wallpaperaccess.com/full/6760532.jpg"
+            className={styles.image}
+          />
 
         <Menu />
 
@@ -40,7 +44,11 @@ export default function About() {
       <div className={styles.eps}>
         <Episode />
         <Episode />
+        <Episode />
+        <Episode />
+        <Episode />
+        <Episode />
       </div>
     </div>
   );
-}
+};

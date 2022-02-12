@@ -1,7 +1,7 @@
 import styles from "./episode.module.css";
 import { FaCheckCircle } from "react-icons/fa";
 
-export default function Episode() {
+export default () => {
   return (
     <div className={styles.ep}>
       <div className={styles.info}>
@@ -13,4 +13,4 @@ export default function Episode() {
       </div>
     </div>
   );
-}
+};
