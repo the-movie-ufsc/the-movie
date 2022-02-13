@@ -1,5 +1,6 @@
 import styles from "./login.module.css";
 import Head from "next/head";
+import Link from "next/link";
 
 export default function Login() {
   function submit() {
@@ -36,7 +37,9 @@ export default function Login() {
 
           <div className={styles.register}>
             <p>Não possui uma conta ainda?</p>
-            <a>Registre-se</a>
+            <Link href="/signup">
+              <a>Registre-se</a>
+            </Link>
           </div>
         </div>
 

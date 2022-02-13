@@ -1,5 +1,6 @@
 import styles from "./signup.module.css";
 import Head from "next/head";
+import Link from "next/link";
 
 export default function Signup() {
   const eyeView = "/login/icons/view.svg";
@@ -34,49 +35,24 @@ export default function Signup() {
 
           <form onSubmit={() => submit()}>
             <div className={styles.entrada}>
-              <input className={styles.input} placeholder="Username" />
-              <input
-                type="email"
-                id="email"
-                className={styles.input}
-                placeholder="Email"
-              />
+              <input required className={styles.input} placeholder="Username" />
+              <input required type="email" id="email" className={styles.input} placeholder="Email" />
               <div className={styles.inputIcon}>
-                <input
-                  type="password"
-                  id="password"
-                  className={styles.input}
-                  placeholder="Senha"
-                />
-                <div
-                  onClick={() => changeViewPassword("password")}
-                  className={styles.boxIcon}
-                >
-                  <img
-                    id="view-password"
-                    src={eyeView}
-                    className={styles.icon}
-                    alt="viewOption"
-                  />
+                <input required type="password" id="password" className={styles.input} placeholder="Senha" />
+                <div onClick={() => changeViewPassword("password")} className={styles.boxIcon}>
+                  <img id="view-password" src={eyeView} className={styles.icon} alt="viewOption" />
                 </div>
               </div>
               <div className={styles.inputIcon}>
                 <input
                   type="password"
+                  required
                   id="confirmPassword"
                   className={styles.input}
                   placeholder="Confirmar Senha"
                 />
-                <div
-                  onClick={() => changeViewPassword("confirmPassword")}
-                  className={styles.boxIcon}
-                >
-                  <img
-                    id="view-confirmPassword"
-                    src={eyeView}
-                    className={styles.icon}
-                    alt="viewOption"
-                  />
+                <div onClick={() => changeViewPassword("confirmPassword")} className={styles.boxIcon}>
+                  <img id="view-confirmPassword" src={eyeView} className={styles.icon} alt="viewOption" />
                 </div>
               </div>
             </div>
@@ -91,7 +67,9 @@ export default function Signup() {
 
           <div className={styles.register}>
             <p>Já possue uma conta?</p>
-            <a>Entrar</a>
+            <Link href="/login">
+              <a>Entrar</a>
+            </Link>
           </div>
         </div>
 
