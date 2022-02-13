@@ -1,3 +1,77 @@
+.frame {
+  display: flex;
+  justify-content: center;
+  padding: 80px 40px;
+}
+
 .container {
-  margin-top: 100px;
+  width: 80%;
+  max-width: 1800px;
+}
+
+.container h1 {
+  color: var(--color-yellow);
+  font-weight: 800;
+  font-size: 36px;
+}
+
+.container h3 {
+  color: var(--color-yellow);
+  margin-top: 60px;
+  margin-bottom: 30px;
+  font-weight: 800;
+  font-size: 24px;
+}
+
+.container label {
+  color: var(--color-yellow);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.form {
+  position: relative;
+  max-width: 250px;
+}
+
+.inbox {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  color: black;
+  text-align: center;
+}
+
+.changePass {
+  margin-top: 20px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 400;
+}
+
+.changePass:hover {
+  color: var(--color-yellow);
+}
+
+.save {
+  margin-top: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  background: var(--color-yellow);
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 10px;
 }
