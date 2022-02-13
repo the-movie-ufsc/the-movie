@@ -36,7 +36,7 @@ export default function Footer() {
 
       <div className={styles.bottom}>
         <img className={styles.image} src="/footer/onda.svg" />
-        <h4 className={styles.mark}>© 2021-2022 TheMovie</h4>
+        <p className={styles.mark}>© 2021-2022 TheMovie</p>
       </div>
     </div>
   );
