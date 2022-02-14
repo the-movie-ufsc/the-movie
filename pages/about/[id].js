@@ -4,6 +4,7 @@ import styles from "./about.module.css";
 import Episode from "../../components/Shared/Episode";
 import Menu from "../../components/Shared/Menu";
 import TMDB from "../../components/TMDB";
+import { FaInfoCircle, FaPlay } from "react-icons/fa";
 
 export default function About() {
   const router = useRouter();
@@ -42,8 +43,13 @@ export default function About() {
               <p>{item.overview}</p>
             </div>
             <div className={styles.buttons}>
-              <a className={styles.button_watch}>Assistir</a>
+              <a className={styles.button_watch} href="">
+                <FaPlay color="var(--color-white)" size={20} />
+                Assistir
+              </a>
+
               <a className={styles.button_more_info} href="">
+                <FaInfoCircle color="var(--color-white)" size={20} />
                 Mais informações
               </a>
             </div>
