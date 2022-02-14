@@ -59,7 +59,7 @@ export default function Signup() {
 
             <button type="submit" className={styles.button}>
               <div>
-                Login
+                Sign Up
                 <img src="/login/icons/arrow-right.svg" />
               </div>
             </button>
