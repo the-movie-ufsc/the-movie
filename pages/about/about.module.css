@@ -18,7 +18,7 @@
   height: 80%;
   width: 40%;
   display: grid;
-  grid-template-rows: 20% 40% 20%;
+  grid-template-rows: 20% 40% 5% 15%;
   grid-gap: 20px;
 }
 

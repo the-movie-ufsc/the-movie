@@ -8,13 +8,13 @@ import { FaInfoCircle, FaPlay } from "react-icons/fa";
 
 export default function About() {
   const router = useRouter();
-  const { id } = router.query;
+  const { id, type } = router.query;
 
   const [item, setItem] = useState(null);
 
   useEffect(() => {
     const loadAll = async () => {
-      let chosenInfo = await TMDB.getMovieInfo(id, "movie");
+      let chosenInfo = await TMDB.getMovieInfo(id, type ? type : "tv");
       console.log(chosenInfo);
       setItem(chosenInfo);
     };
@@ -36,12 +36,13 @@ export default function About() {
         >
           <div className={styles.info}>
             <div className={styles.name}>
-              <h1>{item.title}</h1>
+              <h1>{item.title || item.name}</h1>
             </div>
 
             <div className={styles.desc}>
               <p>{item.overview}</p>
             </div>
+            <div className={styles.progress}>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
             <div className={styles.buttons}>
               <a className={styles.button_watch} href="">
                 <FaPlay color="var(--color-white)" size={20} />
