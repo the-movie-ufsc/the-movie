@@ -11,6 +11,7 @@
   box-shadow: drop-shadow(0px 20px 25px rgba(0, 0, 0, 0.3));
   display: flex;
   flex-direction: column;
+  margin-bottom: 50px;
 }
 
 .info {
@@ -18,8 +19,8 @@
   height: 80%;
   width: 40%;
   display: grid;
-  grid-template-rows: 20% 40% 5% 15%;
-  grid-gap: 20px;
+  grid-template-rows: 15% 40% 5% 5% 15%;
+  grid-gap: 10px;
 }
 
 .name {
@@ -46,6 +47,34 @@
   font-size: 16px;
 }
 
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rating img {
+  height: 20px;
+}
+
+.movie_progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.progress_bar {
+  height: 10px;
+  width: 80%;
+  background-color: var(--color-gray);
+}
+
+.progress {
+  height: 10px;
+  width: 40%;
+  background-color: var(--color-yellow);
+}
+
 .buttons {
   display: flex;
   align-items: center;
@@ -60,9 +89,14 @@
   font-weight: bold;
   padding: 10px 15px;
   border-radius: 20px;
+  border: none;
   text-decoration: none;
   margin-right: 30px;
   transition: 0.3s;
+}
+
+.icon_fa {
+  margin-right: 10px;
 }
 
 .button_more_info:hover {

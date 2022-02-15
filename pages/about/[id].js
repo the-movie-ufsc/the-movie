@@ -36,23 +36,37 @@ export default function About() {
         >
           <div className={styles.info}>
             <div className={styles.name}>
-              <h1>{item.title || item.name}</h1>
+              <h1>{(item.title && item.title.split(":")[0]) || (item.name && item.name.split(":")[0])}</h1>
             </div>
 
             <div className={styles.desc}>
               <p>{item.overview}</p>
             </div>
-            <div className={styles.progress}>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
-            <div className={styles.buttons}>
-              <a className={styles.button_watch} href="">
-                <FaPlay color="var(--color-white)" size={20} />
-                Assistir
-              </a>
 
-              <a className={styles.button_more_info} href="">
-                <FaInfoCircle color="var(--color-white)" size={20} />
+            <div className={styles.rating}>
+              <p>{item.number_of_seasons || item.runtime}</p>
+              <p>
+                {new Date(item.first_air_date).getFullYear() || new Date(item.release_date).getFullYear()}{" "}
+              </p>
+            </div>
+
+            <div className={styles.movie_progress}>
+              <div className={styles.progress_bar}>
+                <div className={styles.progress}></div>
+              </div>
+              <strong>T01:E03</strong>
+            </div>
+
+            <div className={styles.buttons}>
+              <button className={styles.button_watch} href="">
+                <FaPlay className={styles.icon_fa} color="var(--color-white)" size={20} />
+                Assistir
+              </button>
+
+              <button className={styles.button_more_info} href="">
+                <FaInfoCircle className={styles.icon_fa} color="var(--color-white)" size={20} />
                 Mais informações
-              </a>
+              </button>
             </div>
           </div>
         </section>
