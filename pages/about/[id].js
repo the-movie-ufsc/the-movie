@@ -5,6 +5,7 @@ import Episode from "../../components/Shared/Episode";
 import Menu from "../../components/Shared/Menu";
 import TMDB from "../../components/TMDB";
 import { FaInfoCircle, FaPlay } from "react-icons/fa";
+import { AiOutlinePlus } from "react-icons/ai";
 
 export default function About() {
   const router = useRouter();
@@ -14,8 +15,7 @@ export default function About() {
 
   useEffect(() => {
     const loadAll = async () => {
-      let chosenInfo = await TMDB.getMovieInfo(id, type ? type : "tv");
-      console.log(chosenInfo);
+      let chosenInfo = await TMDB.getMovieInfo(id, type);
       setItem(chosenInfo);
     };
 
@@ -59,27 +59,33 @@ export default function About() {
 
             <div className={styles.buttons}>
               <button className={styles.button_watch} href="">
-                <FaPlay className={styles.icon_fa} color="var(--color-white)" size={20} />
+                <FaPlay className={styles.icon_fa} color="var(--color-white)" size={16} />
                 Assistir
               </button>
 
               <button className={styles.button_more_info} href="">
-                <FaInfoCircle className={styles.icon_fa} color="var(--color-white)" size={20} />
+                <FaInfoCircle className={styles.icon_fa} color="var(--color-white)" size={16} />
                 Mais informações
               </button>
+
+              <a href={`/home`} className={styles.button_add_list}>
+                <AiOutlinePlus className={styles.icon} />
+              </a>
             </div>
           </div>
         </section>
       )}
 
-      <div className={styles.eps}>
-        <Episode />
-        <Episode />
-        <Episode />
-        <Episode />
-        <Episode />
-        <Episode />
-      </div>
+      {type === "tv" && (
+        <div className={styles.eps}>
+          <Episode />
+          <Episode />
+          <Episode />
+          <Episode />
+          <Episode />
+          <Episode />
+        </div>
+      )}
     </div>
   );
 }

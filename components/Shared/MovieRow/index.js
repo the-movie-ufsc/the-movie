@@ -6,6 +6,14 @@ import styles from "./movieRow.module.css";
 export default ({ title, items }) => {
   const router = useRouter();
 
+  let media_type = null;
+
+  if (router.pathname == "/movies") {
+    media_type = "movie";
+  } else if (router.pathname == "/series") {
+    media_type = "tv";
+  }
+
   return (
     <div className={styles.movie_row}>
       <h2>{title}</h2>
@@ -17,7 +25,7 @@ export default ({ title, items }) => {
                 <Link
                   href={{
                     pathname: "/about/[id]",
-                    query: { id: item.id, type: item.media_type },
+                    query: { id: item.id, type: media_type || (item.name ? "tv" : "movie") },
                   }}
                 >
                   <img
