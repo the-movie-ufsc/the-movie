@@ -3,6 +3,7 @@ import styles from "./home.module.css";
 import MovieRow from "../../components/Shared/MovieRow";
 import Menu from "../../components/Shared/Menu";
 import FeaturedMovie from "../../components/Shared/FeaturedMovie/index";
+import Footer from "../../components/Shared/Footer"
 import TMDB from "../../components/TMDB";
 
 export default function Home() {
@@ -39,7 +40,7 @@ export default function Home() {
           <MovieRow key={key} title={item.title} items={item.items} />
         ))}
       </section>
-      {/* Footer */}
+      <Footer />
     </div>
   );
 }
