@@ -6,6 +6,7 @@
 
 .bottom {
   position: relative;
+  display: flex;
 }
 
 @media (min-width: 1093px) {
@@ -18,14 +19,14 @@
   width: 100%;
   min-height: 100px;
   object-fit: cover;
+  margin-bottom: 0;
 }
 
 .mark {
   width: 100%;
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
   text-align: center;
-  margin-bottom: 10px;
 }
 
 .socialIncon {
