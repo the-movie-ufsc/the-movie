@@ -39,7 +39,8 @@
   transform: scale(1);
 }
 
-.movierow_left, .movierow_right {
+.movierow_left,
+.movierow_right {
   position: absolute;
   width: 60px;
   height: 276px;
@@ -52,14 +53,14 @@
   transition: 0.3s;
 }
 
-.movierow_left{
-  background: linear-gradient(to right, rgb(0,0,0,0.8), transparent);
+.movierow_left {
+  background: linear-gradient(to right, rgb(0, 0, 0, 0.8), transparent);
   left: 0;
 }
 
 .movierow_right {
   right: 0;
-  background: linear-gradient(to left, rgb(0,0,0,0.8), transparent);
+  background: linear-gradient(to left, rgb(0, 0, 0, 0.8), transparent);
 }
 
 .movie_row:hover .movierow_left,
