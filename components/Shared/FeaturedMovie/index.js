@@ -15,7 +15,7 @@ export default ({ item }) => {
     >
       <div className={styles.info}>
         <div className={styles.name}>
-          <h1>{item.name}</h1>
+          <h1>{item.name || item.title}</h1>
         </div>
 
         <div className={styles.desc}>
@@ -24,12 +24,12 @@ export default ({ item }) => {
 
         <div className={styles.buttons}>
           <a className={styles.button_watch} href="">
-            <FaPlay color="var(--color-white)" size={20} />
+            <FaPlay className={styles.icon_fa} color="var(--color-white)" size={16} />
             Assistir
           </a>
 
           <a className={styles.button_more_info} href="">
-            <FaInfoCircle color="var(--color-white)" size={20} />
+            <FaInfoCircle className={styles.icon_fa} color="var(--color-white)" size={16} />
             Mais informações
           </a>
 
