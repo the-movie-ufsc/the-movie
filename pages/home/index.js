@@ -5,6 +5,7 @@ import Menu from "../../components/Shared/Menu";
 import FeaturedMovie from "../../components/Shared/FeaturedMovie/index";
 import Footer from "../../components/Shared/Footer"
 import TMDB from "../../components/TMDB";
+import Head from "next/head";
 
 export default function Home() {
   const [movieList, setMovieList] = useState([]);
@@ -28,6 +29,11 @@ export default function Home() {
   }, []);
 
   return (
+  <>
+    <Head>
+      <title>Home | The Movie</title>
+      <meta property="og:title" content="Home The Movie" key="title" />
+    </Head>
     <div className={styles.container}>
       <Menu className={styles.menu} />
 
@@ -42,5 +48,6 @@ export default function Home() {
       </section>
       <Footer />
     </div>
+  </>
   );
 }

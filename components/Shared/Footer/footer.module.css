@@ -2,6 +2,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  margin-top: 90px;
 }
 
 .bottom {
@@ -107,7 +108,6 @@
 .gridBox h3 {
   margin-bottom: 10px;
   color: var(--color-yellow);
-  font-size: 24px;
 }
 
 .links {
