@@ -83,13 +83,34 @@ export default {
     return info;
   },
 
-  getSimilar: async (id) => {
-    return [
-      {
-        slug: "similar",
-        title: "Similares",
-        items: await basicFetch(`/movie/${id}/similar?language=pt-BR&api_key=${API_KEY}`),
-      },
-    ];
+  getSimilar: async (id, type) => {
+    let info = [];
+
+    if (id) {
+      switch (type) {
+        case "movie":
+          info = [
+            {
+              slug: "similar",
+              title: "Similares",
+              items: await basicFetch(`/movie/${id}/similar?language=pt-BR&api_key=${API_KEY}`),
+            },
+          ];
+          break;
+        case "tv":
+          info = [
+            {
+              slug: "similar",
+              title: "Similares",
+              items: await basicFetch(`/tv/${id}/similar?language=pt-BR&api_key=${API_KEY}`),
+            },
+          ];
+          break;
+        default:
+          info = null;
+          break;
+      }
+    }
+    return info;
   },
 };
