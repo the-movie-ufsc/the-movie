@@ -3,6 +3,7 @@ import MovieRow from "../../components/Shared/MovieRow";
 import styles from "./list.module.css";
 import Menu from "../../components/Shared/Menu";
 import TMDB from "../../components/TMDB";
+import Footer from "../../components/Shared/Footer"
 
 export default function List() {
 
@@ -32,8 +33,8 @@ export default function List() {
         ))}
       </section>
 
+      <Footer />
     </div>
-
 
   );
 }
