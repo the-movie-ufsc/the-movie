@@ -4,7 +4,7 @@
 
 ## The Movie
 
-First, run the development server:
+Para conferir o resutado da aplicação é necessário executar:
 
 ```bash
 npm run dev
@@ -12,5 +12,5 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+O acesso da aplicação é via: [http://localhost:3000/home](http://localhost:3000/home)
 
