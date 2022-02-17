@@ -7,8 +7,6 @@ import TMDB from "../../components/TMDB";
 import { FaInfoCircle, FaPlay } from "react-icons/fa";
 import { AiOutlinePlus } from "react-icons/ai";
 import MovieRow from "../../components/Shared/MovieRow";
-import Select from "react-select";
-import chroma from "chroma-js";
 
 export default function About() {
   const router = useRouter();
@@ -16,6 +14,8 @@ export default function About() {
 
   const [similarList, setSimilarList] = useState([]);
   const [item, setItem] = useState(null);
+  const [season, setSeason] = useState(null);
+  const [episodes, setEpisodes] = useState([]);
 
   useEffect(() => {
     const loadAll = async () => {
@@ -28,6 +28,15 @@ export default function About() {
 
     loadAll();
   }, [id]);
+
+  useEffect(() => {
+    const loadAll = async () => {
+      let result = await TMDB.getEpisodes(id, season);
+      setEpisodes(result.episodes);
+    };
+
+    loadAll();
+  }, [season]);
 
   const options =
     item &&
@@ -92,17 +101,23 @@ export default function About() {
         <div className={styles.tv}>
           <div className={styles.season}>
             <h2>Episódios</h2>
-            {options && <Select options={options} styles={colourStyles} />}
+            {options && (
+              <select defaultValue={1} onChange={(e) => setSeason(e.target.value)}>
+                {options.map((season) => (
+                  <option value={season.value}>{season.label}</option>
+                ))}
+              </select>
+            )}
           </div>
 
-          <div className={styles.episodes}>
-            <Episode />
-            <Episode />
-            <Episode />
-            <Episode />
-            <Episode />
-            <Episode />
-          </div>
+          {season && (
+            <div className={styles.episodes}>
+              {episodes &&
+                episodes.map((episode, key) => (
+                  <Episode key={key} number_episode={episode.episode_number} name={episode.name} />
+                ))}
+            </div>
+          )}
         </div>
       )}
 
@@ -114,24 +129,3 @@ export default function About() {
     </div>
   );
 }
-
-const colourStyles = {
-  singleValue: (styles) => ({
-    ...styles,
-    color: "var(--color-white)",
-  }),
-  control: (styles) => ({
-    ...styles,
-    background: "var(--color-yellow)",
-    minWidth: "400px",
-  }),
-  menuList: (styles) => ({
-    ...styles,
-    background: "var(--color-black)",
-  }),
-  option: (styles, { isFocused, isSelected }) => ({
-    ...styles,
-    background: isFocused ? "var(--color-gray);" : isSelected ? "var(--color-yellow)" : undefined,
-    zIndex: 1,
-  }),
-};

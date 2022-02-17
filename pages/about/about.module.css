@@ -154,6 +154,20 @@
   margin-bottom: 40px;
 }
 
+.season select {
+  width: 30%;
+  background-color: var(--color-yellow);
+  border: none;
+  color: var(--color-white);
+  padding: 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.season select option {
+  color: var(--color-white);
+}
+
 .season h2 {
   color: var(--color-white);
   font-size: 24px;

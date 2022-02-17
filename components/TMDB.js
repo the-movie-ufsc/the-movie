@@ -113,4 +113,14 @@ export default {
     }
     return info;
   },
+
+  getEpisodes: async (id, season) => {
+    let info = {};
+
+    if (id && season) {
+      info = await basicFetch(`/tv/${id}/season/${season}?language=pt-BR&api_key=${API_KEY}`);
+    }
+
+    return info;
+  },
 };
