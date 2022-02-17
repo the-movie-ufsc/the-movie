@@ -40,12 +40,13 @@ export default function About() {
 
   useEffect(() => {
     const loadAll = async () => {
-      let result = await TMDB.getEpisodes(id, season);
+      let result = await TMDB.getEpisodes(id, season || 1);
+      console.log(result);
       setEpisodes(result.episodes);
     };
 
     loadAll();
-  }, [season]);
+  }, [id, season]);
 
   return (
     <div className={styles.container}>
@@ -106,7 +107,7 @@ export default function About() {
           <div className={styles.season}>
             <h2>Episódios</h2>
             {options && (
-              <select onChange={(e) => setSeason(e.target.value)}>
+              <select defaultValue={1} onChange={(e) => setSeason(e.target.value)}>
                 {options.map((season) => (
                   <option value={season.value}>{season.label}</option>
                 ))}
@@ -114,14 +115,12 @@ export default function About() {
             )}
           </div>
 
-          {season && (
-            <div className={styles.episodes}>
-              {episodes &&
-                episodes.map((episode, key) => (
-                  <Episode key={key} number_episode={episode.episode_number} name={episode.name} />
-                ))}
-            </div>
-          )}
+          <div className={styles.episodes}>
+            {episodes &&
+              episodes.map((episode, key) => (
+                <Episode key={key} number_episode={episode.episode_number} name={episode.name} />
+              ))}
+          </div>
         </div>
       )}
 
