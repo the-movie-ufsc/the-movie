@@ -37,6 +37,7 @@
   border-radius: 4em;
   transform: scale(0.9);
   transition: all ease 0.2s;
+  user-select: none;  
 }
 
 .socialIncon:hover {

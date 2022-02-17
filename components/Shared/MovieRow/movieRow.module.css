@@ -8,6 +8,7 @@
   font-size: 24px;
   padding-left: 10px;
   margin: 0px 0px 0px 5%;
+  user-select: none;  
 }
 
 .list_area {
@@ -16,6 +17,7 @@
 }
 
 .movie_row_list {
+  user-select: none;  
   width: 999999999999px;
   transition: all ease 0.5s;
 }
