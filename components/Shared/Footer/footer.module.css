@@ -31,14 +31,16 @@
 }
 
 .socialIncon {
-  width: 40px;
+  width: 45px;
   margin-right: 20px;
   cursor: pointer;
   border-radius: 4em;
+  transform: scale(0.9);
+  transition: all ease 0.2s;
 }
 
 .socialIncon:hover {
-  width: 45px;
+  transform: scale(1.1);
 }
 
 .gridContainer {
