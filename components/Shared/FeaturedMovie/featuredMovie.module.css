@@ -64,18 +64,22 @@
   margin-right: 10px;
 }
 
-.button_more_info:hover {
-  opacity: 80%;
-}
-
 .button_watch {
   background-color: var(--color-yellow);
   color: var(--color-white);
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .button_more_info {
   background-color: var(--color-dark-gray);
   color: var(--color-white);
+}
+
+.button_add_list {
+  width: 44px;
+  height: 44px;
+  transition: 0.3s;
 }
 
 .icon {
@@ -87,6 +91,10 @@
   transition: 0.3s;
 }
 
-.button_watch:hover {
+.button_watch:hover, .button_add_list:hover {
+  opacity: 80%;
+}
+
+.button_more_info:hover {
   opacity: 80%;
 }
