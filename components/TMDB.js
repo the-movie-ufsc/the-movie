@@ -63,6 +63,31 @@ export default {
     ];
   },
 
+  getSerieList: async () => {
+    return [
+      {
+        slug: "originals",
+        title: "Em alta",
+        items: await basicFetch(`/discover/tv?with_network=213&language=pt-BR&api_key=${API_KEY}`),
+      },
+      {
+        slug: "sci-fi",
+        title: "Ficção científica",
+        items: await basicFetch(`/discover/tv?with_genres=10765&language=pt-BR&api_key=${API_KEY}`),
+      },
+      {
+        slug: "comedy",
+        title: "Comédia",
+        items: await basicFetch(`/discover/tv?with_genres=35&language=pt-BR&api_key=${API_KEY}`),
+      },
+      {
+        slug: "documentary",
+        title: "Documentários",
+        items: await basicFetch(`/discover/tv?with_genres=99&language=pt-BR&api_key=${API_KEY}`),
+      },
+    ];
+  },
+
   getMovieInfo: async (id, type) => {
     let info = {};
 

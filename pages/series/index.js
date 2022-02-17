@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styles from "./movies.module.css";
+import styles from "./series.module.css";
 import MovieRow from "../../components/Shared/MovieRow";
 import Menu from "../../components/Shared/Menu";
 import FeaturedMovie from "../../components/Shared/FeaturedMovie/index";
@@ -13,14 +13,14 @@ export default function Movies() {
   useEffect(() => {
     const loadAll = async () => {
       // pegando todas as listas
-      let list = await TMDB.getMovieList();
+      let list = await TMDB.getSerieList();
       setMovieList(list);
 
       //pegando destaque (featured)
       let originals = list.filter((i) => i.slug === "originals");
       let random = Math.floor(Math.random() * (originals[0].items.results.length - 1));
       let chosen = originals[0].items.results[random];
-      let chosenInfo = await TMDB.getMovieInfo(chosen.id, "movie");
+      let chosenInfo = await TMDB.getMovieInfo(chosen.id, "tv");
       setFeaturedData(chosenInfo);
     };
 
