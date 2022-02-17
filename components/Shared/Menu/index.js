@@ -13,54 +13,24 @@ export default function Menu() {
         </div>
         <div className={styles.navigation}>
           <Link href="/home">
-            <a
-              className={
-                router.pathname == "/home" ? styles.active : styles.link
-              }
-            >
-              Home
-            </a>
+            <a className={router.pathname == "/home" ? styles.active : styles.link}>Home</a>
           </Link>
           <Link href="/movies">
-            <a
-              className={
-                router.pathname == "/movies" ? styles.active : styles.link
-              }
-            >
-              Filmes
-            </a>
+            <a className={router.pathname == "/movies" ? styles.active : styles.link}>Filmes</a>
           </Link>
           <Link href="/series">
-            <a
-              className={
-                router.pathname == "/series" ? styles.active : styles.link
-              }
-            >
-              Séries
-            </a>
+            <a className={router.pathname == "/series" ? styles.active : styles.link}>Séries</a>
           </Link>
           <Link href="/list">
-            <a
-              className={
-                router.pathname == "/list" ? styles.active : styles.link
-              }
-            >
-              Minha lista
-            </a>
+            <a className={router.pathname == "/list" ? styles.active : styles.link}>Minha lista</a>
           </Link>
         </div>
 
         <div className={styles.search}>
-          <input
-            type="text"
-            placeholder="Pesquise por filme, série, gênero..."
-          />
+          <input type="text" placeholder="Pesquise por filme, série, gênero..." />
         </div>
         <div className={styles.avatar}>
-          <img
-            src="https://pbs.twimg.com/media/FFz6f9UVcAQyLhb.jpg"
-            alt="Avatar"
-          />
+          <img src="https://pbs.twimg.com/media/FFz6f9UVcAQyLhb.jpg" alt="Avatar" />
         </div>
       </div>
     </div>

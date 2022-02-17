@@ -40,13 +40,13 @@ export default function About() {
 
   useEffect(() => {
     const loadAll = async () => {
-      let result = await TMDB.getEpisodes(id, season || 1);
+      let result = await TMDB.getEpisodes(id, season);
       console.log(result);
       setEpisodes(result.episodes);
     };
 
     loadAll();
-  }, [id, season]);
+  }, [season]);
 
   return (
     <div className={styles.container}>
@@ -107,7 +107,7 @@ export default function About() {
           <div className={styles.season}>
             <h2>Episódios</h2>
             {options && (
-              <select defaultValue={1} onChange={(e) => setSeason(e.target.value)}>
+              <select onChange={(e) => setSeason(e.target.value)}>
                 {options.map((season) => (
                   <option value={season.value}>{season.label}</option>
                 ))}

@@ -9,7 +9,6 @@
 }
 
 .info {
-  overflow: hidden;
   margin: 200px auto auto 10%;
   height: 60%;
   width: 80%;
@@ -17,7 +16,7 @@
   display: grid;
   grid-template-rows: 20% 40% 20%;
   grid-gap: 20px;
-  user-select: none;  
+  user-select: none;
 }
 
 .name {
@@ -26,7 +25,7 @@
 }
 
 .name h1 {
-  font-size:calc(30px + 1vw);
+  font-size: 48px;
   font-weight: bold;
 }
 
@@ -54,7 +53,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size:calc(4px + 1vw);
+  font-size: max(1vw, 16px);
   font-weight: bold;
   padding: 10px 15px;
   border-radius: 20px;
@@ -94,7 +93,8 @@
   transition: 0.3s;
 }
 
-.button_watch:hover, .button_add_list:hover {
+.button_watch:hover,
+.button_add_list:hover {
   opacity: 80%;
 }
 
