@@ -33,7 +33,7 @@ export default ({ item }) => {
             Mais informações
           </a>
 
-          <a href={`/watch/${item.id}`} className={styles.button_add_list}>
+          <a href="" className={styles.button_add_list}>
             <AiOutlinePlus className={styles.icon} />
           </a>
         </div>
