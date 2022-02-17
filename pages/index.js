@@ -1,3 +1,5 @@
-export default function Home() {
-  return <div></div>;
+import Home from './home'
+
+export default function Index() {
+  return <Home/>;
 }
