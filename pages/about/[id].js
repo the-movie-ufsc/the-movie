@@ -17,10 +17,20 @@ export default function About() {
   const [season, setSeason] = useState(null);
   const [episodes, setEpisodes] = useState([]);
 
+  const [options, setOptions] = useState([]);
+
   useEffect(() => {
     const loadAll = async () => {
       let chosenInfo = await TMDB.getMovieInfo(id, type);
       setItem(chosenInfo);
+
+      let options =
+        chosenInfo &&
+        chosenInfo.seasons &&
+        chosenInfo.seasons.map((season) => ({ value: season.season_number, label: season.name }));
+      setOptions(options);
+
+      setSeason(null);
 
       let list = await TMDB.getSimilar(id, type);
       setSimilarList(list);
@@ -37,11 +47,6 @@ export default function About() {
 
     loadAll();
   }, [season]);
-
-  const options =
-    item &&
-    item.seasons &&
-    item.seasons.map((season) => ({ value: season.season_number, label: season.name }));
 
   return (
     <div className={styles.container}>
@@ -102,7 +107,7 @@ export default function About() {
           <div className={styles.season}>
             <h2>Episódios</h2>
             {options && (
-              <select defaultValue={1} onChange={(e) => setSeason(e.target.value)}>
+              <select onChange={(e) => setSeason(e.target.value)}>
                 {options.map((season) => (
                   <option value={season.value}>{season.label}</option>
                 ))}
