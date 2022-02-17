@@ -7,6 +7,7 @@ import TMDB from "../../components/TMDB";
 import { FaInfoCircle, FaPlay } from "react-icons/fa";
 import { AiOutlinePlus } from "react-icons/ai";
 import MovieRow from "../../components/Shared/MovieRow";
+import Footer from "../../components/Shared/Footer";
 
 export default function About() {
   const router = useRouter();
@@ -29,8 +30,6 @@ export default function About() {
         chosenInfo.seasons &&
         chosenInfo.seasons.map((season) => ({ value: season.season_number, label: season.name }));
       setOptions(options);
-
-      setSeason(null);
 
       let list = await TMDB.getSimilar(id, type);
       setSimilarList(list);
@@ -131,6 +130,7 @@ export default function About() {
           <MovieRow key={key} title={item.title} items={item.items} />
         ))}
       </div>
+      <Footer />
     </div>
   );
 }
