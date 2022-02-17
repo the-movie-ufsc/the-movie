@@ -7,6 +7,8 @@ import TMDB from "../../components/TMDB";
 import { FaInfoCircle, FaPlay } from "react-icons/fa";
 import { AiOutlinePlus } from "react-icons/ai";
 import MovieRow from "../../components/Shared/MovieRow";
+import Select from "react-select";
+import chroma from "chroma-js";
 
 export default function About() {
   const router = useRouter();
@@ -19,19 +21,18 @@ export default function About() {
     const loadAll = async () => {
       let chosenInfo = await TMDB.getMovieInfo(id, type);
       setItem(chosenInfo);
-    };
 
-    loadAll();
-  }, [id]);
-
-  useEffect(() => {
-    const loadAll = async () => {
       let list = await TMDB.getSimilar(id, type);
       setSimilarList(list);
     };
 
     loadAll();
   }, [id]);
+
+  const options =
+    item &&
+    item.seasons &&
+    item.seasons.map((season) => ({ value: season.season_number, label: season.name }));
 
   return (
     <div className={styles.container}>
@@ -88,13 +89,20 @@ export default function About() {
       )}
 
       {type === "tv" && (
-        <div className={styles.eps}>
-          <Episode />
-          <Episode />
-          <Episode />
-          <Episode />
-          <Episode />
-          <Episode />
+        <div className={styles.tv}>
+          <div className={styles.season}>
+            <h2>Episódios</h2>
+            {options && <Select options={options} styles={colourStyles} />}
+          </div>
+
+          <div className={styles.episodes}>
+            <Episode />
+            <Episode />
+            <Episode />
+            <Episode />
+            <Episode />
+            <Episode />
+          </div>
         </div>
       )}
 
@@ -106,3 +114,24 @@ export default function About() {
     </div>
   );
 }
+
+const colourStyles = {
+  singleValue: (styles) => ({
+    ...styles,
+    color: "var(--color-white)",
+  }),
+  control: (styles) => ({
+    ...styles,
+    background: "var(--color-yellow)",
+    minWidth: "400px",
+  }),
+  menuList: (styles) => ({
+    ...styles,
+    background: "var(--color-black)",
+  }),
+  option: (styles, { isFocused, isSelected }) => ({
+    ...styles,
+    background: isFocused ? "var(--color-gray);" : isSelected ? "var(--color-yellow)" : undefined,
+    zIndex: 1,
+  }),
+};

@@ -1,5 +1,5 @@
 .movie_row {
-  color: #ffc700;
+  color: var(--color-yellow);
   margin: 0;
   margin-bottom: 30px;
 }
