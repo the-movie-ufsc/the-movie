@@ -4,7 +4,8 @@ import MovieRow from "../../components/Shared/MovieRow";
 import Menu from "../../components/Shared/Menu";
 import FeaturedMovie from "../../components/Shared/FeaturedMovie/index";
 import TMDB from "../../components/TMDB";
-import Footer from "../../components/Shared/Footer"
+import Footer from "../../components/Shared/Footer";
+import Head from "next/head";
 
 export default function Movies() {
   const [movieList, setMovieList] = useState([]);
@@ -28,19 +29,26 @@ export default function Movies() {
   }, []);
 
   return (
-    <div className={styles.container}>
-      <Menu className={styles.menu} />
+    <>
+      <Head>
+        <title>Séries | The Movie</title>
+        <meta property="og:title" content="Filmes The Movie" key="title" />
+      </Head>
 
-      {/* Destaque */}
-      {featuredData && <FeaturedMovie className={styles.featured_movie} item={featuredData} />}
+      <div className={styles.container}>
+        <Menu className={styles.menu} />
 
-      {/* Listas */}
-      <section className={styles.list}>
-        {movieList.map((item, key) => (
-          <MovieRow key={key} title={item.title} items={item.items} />
-        ))}
-      </section>
-      <Footer />
-    </div>
+        {/* Destaque */}
+        {featuredData && <FeaturedMovie className={styles.featured_movie} item={featuredData} />}
+
+        {/* Listas */}
+        <section className={styles.list}>
+          {movieList.map((item, key) => (
+            <MovieRow key={key} title={item.title} items={item.items} />
+          ))}
+        </section>
+        <Footer />
+      </div>
+    </>
   );
 }
