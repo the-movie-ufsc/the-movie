@@ -1,21 +1,45 @@
-.frame {
+.container {
   display: flex;
   justify-content: center;
-  padding: 80px 40px;
+  padding: 2em;
 }
 
-.container {
-  width: 80%;
-  max-width: 1800px;
+@media (min-width: 720px) {
+  .container {
+    padding: 5em;
+  }
 }
 
-.container h1 {
-  color: var(--color-yellow);
-  font-weight: 800;
-  font-size: 36px;
+.screen {
+  max-width: 1600px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.container h3 {
+@media (max-width: 720px) {
+  .screen h1 {
+    text-align: center;
+    color: var(--color-yellow);
+    font-weight: 800;
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 720px) {
+  .screen h1 {
+    color: var(--color-yellow);
+    font-weight: 800;
+    font-size: 36px;
+  }
+}
+
+.screen button {
+  cursor: pointer;
+}
+
+.screen h3 {
   color: var(--color-yellow);
   margin-top: 60px;
   margin-bottom: 30px;
@@ -23,7 +47,35 @@
   font-size: 24px;
 }
 
-.container label {
+@media (max-width: 719px) {
+  .screen h3 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 719px) {
+  .frameOne {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (min-width: 720px) {
+  .frameOne {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (min-width: 720px) {
+  .containerAccount {
+    width: 80%;
+    max-width: 1800px;
+  }
+}
+
+.containerAccount label {
   color: var(--color-yellow);
   font-weight: 700;
   cursor: pointer;
@@ -74,4 +126,108 @@
   outline: none;
   border: none;
   border-radius: 10px;
+}
+
+.boxPayment {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  justify-content: space-between;
+  padding-bottom: 1em;
+  border-bottom: 2px solid #d4d4d4;
+}
+
+.boxPayment:hover {
+  color: var(--color-yellow);
+}
+
+.boxPayment h4 {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.boxPayment button {
+  display: flex;
+  align-items: center;
+  padding: 5px 20px;
+  background-color: #363636;
+  color: white;
+  gap: 8px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.boxPayment button img {
+  width: 12px;
+}
+
+@media (max-width: 719px) {
+  .suicideMode {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.suicideMode p {
+  color: white;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+}
+
+.profileImage {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+@media (max-width: 719px) {
+  .profileImage {
+    margin-top: 4em;
+  }
+}
+
+.suicideMode button {
+  display: flex;
+  margin-top: 10px;
+  background: #363636;
+  border-radius: 20px;
+  padding: 15px 30px;
+  border: none;
+}
+
+@media (max-width: 720px) {
+  .suicideMode button {
+    margin-top: 20px;
+  }
+}
+
+.profileImage img {
+  display: flex;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+
+.profileImage button {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 29px;
+  width: 105px;
+  height: 32px;
+  align-items: center;
+  padding: 5px 20px;
+  background-color: #363636;
+  color: white;
+  gap: 8px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.profileImage button img {
+  width: 12px;
 }
