@@ -29,9 +29,11 @@ export default function Menu() {
         <div className={styles.search}>
           <input type="text" placeholder="Pesquise por filme, série, gênero..." />
         </div>
-        <div className={styles.avatar}>
-          <img src="https://pbs.twimg.com/media/FFz6f9UVcAQyLhb.jpg" alt="Avatar" />
-        </div>
+        <Link href="/settings">
+          <a className={styles.avatar}>
+            <img src="https://pbs.twimg.com/media/FFz6f9UVcAQyLhb.jpg" alt="Avatar" />
+          </a>
+        </Link>
       </div>
     </div>
   );
