@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import MovieRow from "../../components/Shared/MovieRow";
+import UserList from "../../components/Shared/userList";
 import styles from "./list.module.css";
 import Menu from "../../components/Shared/Menu";
 import TMDB from "../../components/TMDB";
@@ -12,7 +13,7 @@ export default function List() {
   useEffect(() => {
     const loadAll = async () => {
       // pegando todas as listas
-      const list = await TMDB.getHomeList();
+      const list = await TMDB.getUserList();
       setMovieList(list);
     };
 
@@ -34,7 +35,7 @@ export default function List() {
         {/* Listas */}
         <section className={styles.list}>
           {movieList.map((item, key) => (
-            <MovieRow key={key} title="" items={item.items} />
+            <UserList key={key} title="" items={item.items} />
           ))}
         </section>
 
