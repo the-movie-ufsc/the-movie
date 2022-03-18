@@ -8,6 +8,13 @@ class RequisitionValidator {
       body("password").notEmpty().withMessage("Password is Required"),
     ];
   }
+
+  checkLogUser() {
+    return [
+      body("email").notEmpty().withMessage("Email is Required"),
+      body("password").notEmpty().withMessage("Password is Required"),
+    ];
+  }
 }
 
 export default new RequisitionValidator();

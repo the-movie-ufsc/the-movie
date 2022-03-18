@@ -1,9 +1,32 @@
 // import styles from "./signup.module.css";
 import Head from "next/head";
+import { useEffect, useState } from "react";
 import Footer from "../../components/Shared/Footer";
+import { getAuthUser } from "../../helpers/useAuth";
 import styles from "./settings.module.css";
+import Router from "next/router";
 
 export default function Settings() {
+  const [user, setUser] = useState(null);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+
+  async function getUser() {
+    try {
+      const newUser = await getAuthUser();
+      setUser(newUser);
+      setName(newUser.name);
+      setEmail(newUser.email);
+    } catch {
+      Router.push("/login");
+    }
+  }
+
+  useEffect(() => {
+    console.log("a");
+    getUser();
+  }, []);
+
   return (
     <>
       <Head>
@@ -21,11 +44,17 @@ export default function Settings() {
               <form className={styles.form}>
                 <div className={styles.inbox}>
                   <label htmlFor="usernameBox">Username</label>
-                  <input require className={styles.input} id="usernameBox" />
+                  <input require className={styles.input} id="usernameBox" value={name} />
                 </div>
                 <div className={styles.inbox}>
                   <label htmlFor="emailBox">Email</label>
-                  <input type="email" require className={styles.input} id="emailBox" />
+                  <input
+                    type="email"
+                    require
+                    className={styles.input}
+                    id="emailBox"
+                    value={email}
+                  />
                 </div>
                 <p className={styles.changePass}>Alterar senha</p>
                 <button className={styles.save}>Salvar</button>

@@ -8,7 +8,13 @@ interface UserAttributes {
   password: string;
 }
 
-export class UserInstance extends Model<UserAttributes> {}
+export class UserInstance extends Model<UserAttributes> {
+  id: any;
+  name: any;
+  email: any;
+  password: any;
+}
+
 UserInstance.init(
   {
     id: {

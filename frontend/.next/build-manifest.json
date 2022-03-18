@@ -30,10 +30,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/home.js"
     ],
-    "/list": [
+    "/signup": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/list.js"
+      "static/chunks/pages/signup.js"
     ]
   },
   "ampFirstPages": []
