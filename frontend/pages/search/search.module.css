@@ -1,0 +1,32 @@
+.container {
+  width: 100%;
+}
+
+.search {
+  margin-top: 200px;
+  width: 100%;
+}
+
+.list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  width: 193px;
+  cursor: pointer;
+}
+
+.img {
+  border-radius: 10px;
+  width: 193px;
+  height: 276px;
+  width: 100%;
+  transform: scale(0.9);
+  transition: all ease 0.2s;
+}
+
+.img:hover {
+  transform: scale(1);
+}

@@ -3,7 +3,7 @@ import styles from "./home.module.css";
 import MovieRow from "../../components/Shared/MovieRow";
 import Menu from "../../components/Shared/Menu";
 import FeaturedMovie from "../../components/Shared/FeaturedMovie/index";
-import Footer from "../../components/Shared/Footer"
+import Footer from "../../components/Shared/Footer";
 import TMDB from "../../components/TMDB";
 import Head from "next/head";
 
@@ -19,7 +19,9 @@ export default function Home() {
 
       //pegando destaque (featured)
       let originals = list.filter((i) => i.slug === "originals");
-      let random = Math.floor(Math.random() * (originals[0].items.results.length - 1));
+      let random = Math.floor(
+        Math.random() * (originals[0].items.results.length - 1)
+      );
       let chosen = originals[0].items.results[random];
       let chosenInfo = await TMDB.getMovieInfo(chosen.id, "tv");
       setFeaturedData(chosenInfo);
@@ -29,25 +31,30 @@ export default function Home() {
   }, []);
 
   return (
-  <>
-    <Head>
-      <title>Home | The Movie</title>
-      <meta property="og:title" content="Home The Movie" key="title" />
-    </Head>
-    <div className={styles.container}>
-      <Menu className={styles.menu} />
+    <>
+      <Head>
+        <title>Home | The Movie</title>
+        <meta property="og:title" content="Home The Movie" key="title" />
+      </Head>
+      <div className={styles.container}>
+        <Menu className={styles.menu} />
 
-      {/* Destaque */}
-      {featuredData && <FeaturedMovie className={styles.featured_movie} item={featuredData} />}
+        {/* Destaque */}
+        {featuredData && (
+          <FeaturedMovie
+            className={styles.featured_movie}
+            item={featuredData}
+          />
+        )}
 
-      {/* Listas */}
-      <section className={styles.list}>
-        {movieList.map((item, key) => (
-          <MovieRow key={key} title={item.title} items={item.items} />
-        ))}
-      </section>
-      <Footer />
-    </div>
-  </>
+        {/* Listas */}
+        <section className={styles.list}>
+          {movieList.map((item, key) => (
+            <MovieRow key={key} title={item.title} items={item.items} />
+          ))}
+        </section>
+        <Footer />
+      </div>
+    </>
   );
 }

@@ -46,13 +46,17 @@ export default ({ title, items }) => {
 
       <div className={styles.list_area}>
         <div className={styles.movie_row_list} style={{ marginLeft: scroll }}>
-          {items.results.length > 0 &&
+          {items.results &&
+            items.results.length > 0 &&
             items.results.map((item, key) => (
               <div key={key} className={styles.moovie_row_item}>
                 <Link
                   href={{
                     pathname: "/about/[id]",
-                    query: { id: item.id, type: media_type || (item.name ? "tv" : "movie") },
+                    query: {
+                      id: item.id,
+                      type: media_type || (item.name ? "tv" : "movie"),
+                    },
                   }}
                 >
                   <img
