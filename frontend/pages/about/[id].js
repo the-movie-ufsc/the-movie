@@ -9,6 +9,7 @@ import { AiOutlinePlus } from "react-icons/ai";
 import MovieRow from "../../components/Shared/MovieRow";
 import Footer from "../../components/Shared/Footer";
 import Head from "next/head";
+import Link from "next/link";
 
 export default function About() {
   const router = useRouter();
@@ -66,6 +67,11 @@ export default function About() {
     }
   }, [item]);
 
+  function addItem() {
+    let addMovie = TMDB.addUserList(id, type)
+    return addMovie
+  }
+
   return (
     <>
       {/* <Head>
@@ -121,7 +127,7 @@ export default function About() {
                   Mais informações
                 </button>
 
-                <a href={`/home`} className={styles.button_add_list}>
+                <a onClick={() => addItem()} className={styles.button_add_list}>
                   <AiOutlinePlus className={styles.icon} />
                 </a>
               </div>

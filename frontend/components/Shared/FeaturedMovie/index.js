@@ -23,18 +23,14 @@ export default ({ item }) => {
         </div>
 
         <div className={styles.buttons}>
-          <a className={styles.button_watch} href="">
+          <a className={styles.button_watch}>
             <FaPlay className={styles.icon_fa} color="var(--color-white)" size={16} />
             Assistir
           </a>
 
-          <a className={styles.button_more_info} href="">
+          <a className={styles.button_more_info}>
             <FaInfoCircle className={styles.icon_fa} color="var(--color-white)" size={16} />
             Mais informações
-          </a>
-
-          <a href="" className={styles.button_add_list}>
-            <AiOutlinePlus className={styles.icon} />
           </a>
         </div>
       </div>

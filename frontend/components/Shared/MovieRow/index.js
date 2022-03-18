@@ -16,6 +16,7 @@ export default ({ title, items }) => {
   } else if (router.pathname == "/series") {
     media_type = "tv";
   }
+  
   const scroll_left = () => {
     let x = scroll + Math.round(window.innerWidth / 2);
     if (x > 0) {

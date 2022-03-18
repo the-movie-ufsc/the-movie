@@ -111,6 +111,18 @@
   color: var(--color-white);
 }
 
+.button_add_list {
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+
+}
+
+.button_add_list:hover {
+  opacity: 75%;
+  width: 80px;
+}
+
 .icon {
   color: var(--color-white);
   font-size: 44px;

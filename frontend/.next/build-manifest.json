@@ -25,6 +25,7 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
+<<<<<<< HEAD
     "/search/[query]": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -34,6 +35,27 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/series.js"
+=======
+    "/about/[id]": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/about/[id].js"
+    ],
+    "/home": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/home.js"
+    ],
+    "/list": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/list.js"
+    ],
+    "/movies": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/movies.js"
+>>>>>>> 35c5ee1c048bd4ed3a7b06e66d0fa1eb01d3f71e
     ]
   },
   "ampFirstPages": []
