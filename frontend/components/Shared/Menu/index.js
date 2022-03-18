@@ -16,9 +16,11 @@ export default function Menu() {
   return (
     <div className={styles.container}>
       <div className={styles.menu}>
-        <div className={styles.logo}>
-          <img src="/logo_menu.svg" alt="The Movie" />
-        </div>
+        <Link href="/home">
+          <a className={styles.logo}>
+            <img src="/logo_menu.svg" alt="The Movie" />
+          </a>
+        </Link>
         <div className={styles.navigation}>
           <Link href="/home">
             <a
